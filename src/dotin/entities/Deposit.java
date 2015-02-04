@@ -1,8 +1,8 @@
 package dotin.entities;
 
-import dotin.Exceptions.DepositBalanceException;
-import dotin.Exceptions.DepositTypeException;
-import dotin.Exceptions.DurationInDaysException;
+import dotin.exceptions.DepositBalanceException;
+import dotin.exceptions.DepositTypeException;
+import dotin.exceptions.DurationInDaysException;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
@@ -186,6 +186,7 @@ public class Deposit implements Comparable<Deposit>{
 
         if (XMLReader.getBigDecimalValue(element, "depositBalance").compareTo(BigDecimal.ZERO) == -1)
             throw new DepositBalanceException("customer"+deposit.getCustomerNumber()+"#deposit balance is negative");
+
 
         deposit.setDepositBalance(XMLReader.getBigDecimalValue(element, "depositBalance"));
 
