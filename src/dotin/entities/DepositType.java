@@ -1,7 +1,7 @@
 package dotin.entities;
 
 
-import dotin.Exceptions.DepositTypeException;
+import dotin.exceptions.DepositTypeException;
 
 public abstract class DepositType {
 
